@@ -11,5 +11,5 @@ Replace `[ ]` with ✅ when done. Deploy only the `g-marketing` Vercel project.
 ## Phase 2
 
 - ✅ 2.1 Backup live site
-- [ ] 2.2 Push only `G-Marketing/G-Marketing`
-- [ ] 2.3 `verify-production.mjs` including toolbar strings and m-control guards
+- ✅ 2.2 Push only `G-Marketing/G-Marketing`
+- ✅ 2.3 `verify-production.mjs` including toolbar strings and m-control guards
