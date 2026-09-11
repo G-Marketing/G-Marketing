@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink font-sans font-normal text-paper antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-sans font-bold;
+}
+
+::selection {
+  background: #3d7cff;
+  color: #f4f6fa;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-cobalt focus:px-4 focus:py-2;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-ink;
+}

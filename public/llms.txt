@@ -1,0 +1,16 @@
+# G-Marketing
+
+English-language advertising, marketing, and growth firm.
+Canonical: https://www.g-marketing.net
+
+## Lines
+- Advertising: paid search, paid social, video, tracking
+- Marketing: positioning, SEO, lifecycle, landing pages
+- Growth: analytics, CRO, experiments, incrementality
+
+## Markets
+Local-market density and global rollouts as separate operating models.
+
+## Contact
+https://www.g-marketing.net/contact
+hello@g-marketing.net

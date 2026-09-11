@@ -9,6 +9,8 @@ out/
 !.env.example
 
 .vercel
+.data/
+backups/
 
 .DS_Store
 Thumbs.db
