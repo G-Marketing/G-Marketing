@@ -29,4 +29,6 @@ Replace `[ ]` with ✅ when done. Local only. No deploy.
 - ✅ 4.1 `npm run build` succeeds
 - ✅ 4.2 Dev server on `http://localhost:3010`
 - ✅ 4.3 Update CHANGELOG + MEMORY
-- ✅ 4.4 Do **not** git push / vercel deploy
+- ✅ 4.4 Backup `backups/pre-deploy.20260911-1641/` then deploy **only** `G-Marketing/G-Marketing` → Vercel project `g-marketing`
+- ✅ 4.5 `verify-production.mjs` against `https://www.g-marketing.net` — all checks passed, including m-control guards
+
