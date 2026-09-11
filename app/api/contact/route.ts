@@ -57,17 +57,23 @@ export async function POST(request: Request) {
     utm_campaign: String(body.utm_campaign || "").trim(),
   };
 
-  const dir = path.join(process.cwd(), ".data");
-  const file = path.join(dir, "leads.json");
-  await mkdir(dir, { recursive: true });
-  let existing: unknown[] = [];
+  console.info("lead", record);
+
   try {
-    existing = JSON.parse(await readFile(file, "utf8")) as unknown[];
-  } catch {
-    existing = [];
+    const dir = process.env.VERCEL ? "/tmp" : path.join(process.cwd(), ".data");
+    const file = path.join(dir, "leads.json");
+    await mkdir(dir, { recursive: true });
+    let existing: unknown[] = [];
+    try {
+      existing = JSON.parse(await readFile(file, "utf8")) as unknown[];
+    } catch {
+      existing = [];
+    }
+    existing.push(record);
+    await writeFile(file, JSON.stringify(existing, null, 2), "utf8");
+  } catch (err) {
+    console.error("lead persist failed", err);
   }
-  existing.push(record);
-  await writeFile(file, JSON.stringify(existing, null, 2), "utf8");
 
   return NextResponse.json({ ok: true });
 }

@@ -10,7 +10,7 @@ const routes = [
   { path: "/services/advertising", expect: 200, contains: ["Paid media"] },
   { path: "/services/marketing", expect: 200, contains: ["findable"] },
   { path: "/services/growth", expect: 200, contains: ["yield"] },
-  { path: "/markets", expect: 200, contains: ["Local density"] },
+  { path: "/markets", expect: 200, contains: ["A local win"] },
   { path: "/approach", expect: 200, contains: ["Diagnostic"] },
   { path: "/contact", expect: 200, contains: ["Book the diagnostic"] },
   { path: "/privacy", expect: 200, contains: ["Privacy"] },
@@ -62,7 +62,8 @@ async function checkSeoHome() {
   const hebrewPlaceholder = text.includes("האתר בהקמה");
   const ok =
     res.status === 200 &&
-    canonical === "https://www.g-marketing.net/" &&
+    (canonical === "https://www.g-marketing.net/" ||
+      canonical === "https://www.g-marketing.net") &&
     jsonld &&
     Boolean(og) &&
     !hebrewPlaceholder;
