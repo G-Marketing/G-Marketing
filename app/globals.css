@@ -37,3 +37,66 @@ select:focus-visible,
 textarea:focus-visible {
   @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-ink;
 }
+
+html.a11y-readable,
+html.a11y-readable body,
+html.a11y-readable button,
+html.a11y-readable input,
+html.a11y-readable select,
+html.a11y-readable textarea {
+  font-family: Arial, Tahoma, sans-serif !important;
+  letter-spacing: 0.04em;
+  word-spacing: 0.08em;
+  line-height: 1.7;
+}
+
+html.a11y-contrast,
+html.a11y-contrast body {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+html.a11y-contrast header,
+html.a11y-contrast footer,
+html.a11y-contrast [class*="bg-panel"],
+html.a11y-contrast [class*="bg-ink"] {
+  background: #000 !important;
+  border-color: #fff !important;
+}
+
+html.a11y-contrast a,
+html.a11y-contrast .text-cobalt,
+html.a11y-contrast .text-gold {
+  color: #ffe600 !important;
+}
+
+html.a11y-invert {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html.a11y-gray {
+  filter: grayscale(1);
+}
+
+html.a11y-invert.a11y-gray {
+  filter: invert(1) hue-rotate(180deg) grayscale(1);
+}
+
+html.a11y-links a {
+  text-decoration: underline !important;
+  text-underline-offset: 0.2em;
+}
+
+html.a11y-motion,
+html.a11y-motion *,
+html.a11y-motion *::before,
+html.a11y-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+html.a11y-focus *:focus {
+  outline: 3px solid #d4a853 !important;
+  outline-offset: 3px !important;
+}

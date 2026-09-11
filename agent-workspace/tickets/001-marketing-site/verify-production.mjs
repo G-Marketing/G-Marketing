@@ -5,7 +5,7 @@
 const BASE = process.argv[2] || "https://www.g-marketing.net";
 
 const routes = [
-  { path: "/", expect: 200, contains: ["G-Marketing", "Book a growth diagnostic", "Advertising"] },
+  { path: "/", expect: 200, contains: ["G-Marketing", "Book a growth diagnostic", "Advertising", "Open accessibility menu"] },
   { path: "/services", expect: 200, contains: ["Three lines"] },
   { path: "/services/advertising", expect: 200, contains: ["Paid media"] },
   { path: "/services/marketing", expect: 200, contains: ["findable"] },

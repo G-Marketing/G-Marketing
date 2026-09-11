@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { SITE } from "@/lib/site";
@@ -36,6 +38,15 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <button
+                type="button"
+                className="text-mist hover:text-paper"
+                onClick={() => window.dispatchEvent(new Event("gm-a11y-statement"))}
+              >
+                Accessibility statement
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
