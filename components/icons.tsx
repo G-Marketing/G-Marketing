@@ -23,6 +23,14 @@ export function IconArrow(props: IconProps) {
   );
 }
 
+export function IconArrowUp(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 19V5M6 11l6-6 6 6" />
+    </svg>
+  );
+}
+
 export function IconTarget(props: IconProps) {
   return (
     <svg {...base(props)}>

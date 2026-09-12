@@ -7,7 +7,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Approach",
   description:
-    "How G-Marketing diagnoses, scores, builds, and operates advertising, marketing, and growth work — and how effectiveness is proven.",
+    "How G-Marketing diagnoses, scores, builds, and operates advertising, marketing, and growth work, and how effectiveness is proven.",
   path: "/approach",
 });
 
@@ -34,7 +34,7 @@ export default function ApproachPage() {
         <div className="overflow-hidden rounded-3xl border border-line">
           <Image
             src="/images/approach-process.jpg"
-            alt="Four instruments on dark stone slabs: compass, hourglass, loupe, and a vial of light."
+            alt="Four instruments on pale slabs in daylight: compass, hourglass, loupe, and a vial of light."
             width={1376}
             height={768}
             priority
@@ -55,7 +55,7 @@ export default function ApproachPage() {
         <h2 className="font-bold text-3xl">What “good” looks like in reporting</h2>
         <ul className="mt-8 grid gap-4 md:grid-cols-2">
           {SCOREBOARD.map((item) => (
-            <li key={item.metric} className="rounded-2xl border border-line bg-ink p-5">
+            <li key={item.metric} className="rounded-2xl border border-line bg-panel p-5">
               <p className="text-cobalt">{item.metric}</p>
               <p className="mt-2 text-sm text-mist">{item.meaning}</p>
             </li>

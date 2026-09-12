@@ -9,3 +9,4 @@
 - Rollback of first production site: git commit `48bbeb6` (Hebrew placeholder). Snapshot in `backups/pre-deploy.20260911-1641/` (gitignored).
 - Production verify: `node agent-workspace/tickets/001-marketing-site/verify-production.mjs`
 - Accessibility toolbar (ticket 002): English port of bina-6. Storage key `gm-a11y`. Footer event `gm-a11y-statement`.
+- Ticket 003 production: light canvas, globe lockup, homepage reel. Dark images in `backups/pre-light.20260912-0034/`. Pre-deploy snapshot in `backups/pre-deploy.light.*`. Rollback git SHA before this ship: `48bd3fe`.

@@ -1,23 +1,36 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "./Logo";
 import { IconClose, IconMenu } from "./icons";
 import { NAV } from "@/lib/site";
 
+function isCurrent(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function navClass(active: boolean) {
+  return active
+    ? "rounded-full bg-cobalt/50 px-3 py-2 text-sm font-medium text-white"
+    : "rounded-full px-3 py-2 text-sm text-mist transition hover:text-paper";
+}
+
 export function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [services, setServices] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-ink/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
-        <Link href="/" aria-label="G-Marketing home" onClick={() => setOpen(false)}>
+        <Link href="/" aria-label="G-Marketing, Global Marketing, home" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-2 md:flex" aria-label="Primary">
           {NAV.map((item) =>
             "children" in item && item.children ? (
               <div
@@ -28,8 +41,9 @@ export function Header() {
               >
                 <Link
                   href={item.href}
-                  className="text-sm text-mist transition hover:text-paper"
+                  className={navClass(isCurrent(pathname, item.href))}
                   aria-expanded={services}
+                  aria-current={isCurrent(pathname, item.href) ? "page" : undefined}
                 >
                   {item.label}
                 </Link>
@@ -40,7 +54,12 @@ export function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block rounded-lg px-3 py-2 text-sm text-mist hover:bg-white/5 hover:text-paper"
+                          className={`block rounded-lg px-3 py-2 text-sm ${
+                            isCurrent(pathname, child.href)
+                              ? "bg-cobalt/50 font-medium text-white"
+                              : "text-mist hover:bg-black/[0.04] hover:text-paper"
+                          }`}
+                          aria-current={isCurrent(pathname, child.href) ? "page" : undefined}
                         >
                           {child.label}
                         </Link>
@@ -53,9 +72,8 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm transition hover:text-paper ${
-                  item.href === "/contact" ? "text-paper" : "text-mist"
-                }`}
+                className={navClass(isCurrent(pathname, item.href))}
+                aria-current={isCurrent(pathname, item.href) ? "page" : undefined}
               >
                 {item.label}
               </Link>
@@ -63,7 +81,7 @@ export function Header() {
           )}
           <Link
             href="/contact"
-            className="rounded-full bg-cobalt px-4 py-2 text-sm font-medium text-paper hover:bg-[#5b90ff]"
+            className="rounded-full bg-cobalt px-4 py-2 text-sm font-medium text-white hover:bg-[#1d4ed8]"
           >
             Book a diagnostic
           </Link>
@@ -82,8 +100,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div id="mobile-nav" className="border-t border-line bg-ink px-5 py-4 md:hidden">
-          <nav className="flex flex-col gap-3" aria-label="Mobile">
+        <div id="mobile-nav" className="border-t border-line bg-panel px-5 py-4 md:hidden">
+          <nav className="flex flex-col gap-2" aria-label="Mobile">
             {NAV.flatMap((item) => {
               const links: { href: string; label: string }[] = [
                 { href: item.href, label: item.label },
@@ -98,7 +116,8 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base text-paper"
+                className={navClass(isCurrent(pathname, item.href))}
+                aria-current={isCurrent(pathname, item.href) ? "page" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {item.label}

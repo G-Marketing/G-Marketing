@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieNotice } from "@/components/CookieNotice";
 import { A11yToolbar } from "@/components/A11yToolbar";
+import { BackToTop } from "@/components/BackToTop";
 import { JsonLd } from "@/components/ui";
 import { SITE } from "@/lib/site";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
@@ -50,8 +51,11 @@ export const metadata: Metadata = {
     images: ["/images/og-share.jpg"],
   },
   icons: {
-    icon: [{ url: "/images/brand-mark.png", type: "image/png", sizes: "1024x1024" }],
-    apple: [{ url: "/images/brand-mark.png" }],
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/images/brand-mark.png", type: "image/png", sizes: "1024x1024" },
+    ],
+    apple: [{ url: "/apple-icon.png" }],
   },
   category: "marketing",
 };
@@ -75,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content">{children}</main>
         <Footer />
         <A11yToolbar />
+        <BackToTop />
         <CookieNotice />
         <script
           dangerouslySetInnerHTML={{

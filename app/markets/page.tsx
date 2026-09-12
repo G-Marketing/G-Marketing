@@ -35,7 +35,7 @@ export default function MarketsPage() {
         <div className="overflow-hidden rounded-3xl border border-line">
           <Image
             src="/images/markets-local-global.jpg"
-            alt="Local night street dissolving into the Earth at night, connected by a cobalt arc."
+            alt="Sunlit local street dissolving into Earth in daylight, connected by a cobalt arc."
             width={1376}
             height={768}
             priority

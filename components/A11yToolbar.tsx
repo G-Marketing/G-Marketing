@@ -108,27 +108,27 @@ export function A11yToolbar() {
 
   return (
     <>
-      <div className="fixed left-4 top-1/2 z-[90] -translate-y-1/2">
+      <div className="fixed right-4 top-1/2 z-[90] -translate-y-1/2 md:left-4 md:right-auto">
         <button
           type="button"
           aria-expanded={open}
           aria-controls="a11y-panel"
           aria-label={open ? "Close accessibility menu" : "Open accessibility menu"}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-12 w-12 items-center justify-center rounded-full border border-cobalt/50 bg-ink/90 text-cobalt shadow-glow backdrop-blur-md hover:border-paper hover:text-paper"
+          className="flex h-12 w-12 items-center justify-center rounded-full border border-cobalt/40 bg-panel text-cobalt shadow-glow hover:border-cobalt hover:text-paper"
         >
           {open ? <IconClose className="h-5 w-5" /> : <IconA11y className="h-5 w-5" />}
         </button>
       </div>
 
       {open && (
-        <div className="fixed left-20 top-4 bottom-4 z-[90] flex items-center">
+        <div className="fixed left-4 right-20 top-4 bottom-24 z-[90] flex items-center justify-end md:left-20 md:right-auto md:bottom-4 md:justify-start">
           <div
             id="a11y-panel"
             role="dialog"
             aria-modal="true"
             aria-labelledby="a11y-title"
-            className="flex max-h-full w-72 flex-col overflow-hidden rounded-3xl border border-line bg-panel/95 p-4 shadow-glow backdrop-blur-md"
+            className="flex max-h-full w-full max-w-72 flex-col overflow-hidden rounded-3xl border border-line bg-panel/95 p-4 shadow-glow backdrop-blur-md"
           >
             <h2 id="a11y-title" className="shrink-0 text-base font-bold text-paper">
               Accessibility menu
@@ -146,7 +146,7 @@ export function A11yToolbar() {
                   <button
                     type="button"
                     aria-label="Decrease text size"
-                    className="rounded-lg p-1 hover:bg-white/10"
+                    className="rounded-lg p-1 hover:bg-black/[0.04]"
                     onClick={() => update({ zoom: Math.max(100, state.zoom - 12.5) })}
                   >
                     <IconMinus className="h-4 w-4" />
@@ -155,7 +155,7 @@ export function A11yToolbar() {
                   <button
                     type="button"
                     aria-label="Increase text size"
-                    className="rounded-lg p-1 hover:bg-white/10"
+                    className="rounded-lg p-1 hover:bg-black/[0.04]"
                     onClick={() => update({ zoom: Math.min(175, state.zoom + 12.5) })}
                   >
                     <IconPlus className="h-4 w-4" />
@@ -211,14 +211,14 @@ export function A11yToolbar() {
               <button
                 type="button"
                 onClick={() => setStatement(true)}
-                className="flex items-center justify-center gap-2 rounded-xl border border-line px-3 py-2 text-sm text-cobalt hover:bg-white/5"
+                className="flex items-center justify-center gap-2 rounded-xl border border-line px-3 py-2 text-sm text-cobalt hover:bg-black/[0.04]"
               >
                 <IconFile className="h-4 w-4" /> Accessibility statement
               </button>
               <button
                 type="button"
                 onClick={reset}
-                className="flex items-center justify-center gap-2 rounded-xl border border-line px-3 py-2 text-sm text-paper hover:bg-white/5"
+                className="flex items-center justify-center gap-2 rounded-xl border border-line px-3 py-2 text-sm text-paper hover:bg-black/[0.04]"
               >
                 <IconReset className="h-4 w-4" /> Reset settings
               </button>
@@ -229,7 +229,7 @@ export function A11yToolbar() {
 
       {statement && (
         <div
-          className="fixed inset-0 z-[95] flex items-center justify-center bg-ink/70 p-4"
+          className="fixed inset-0 z-[95] flex items-center justify-center bg-black/40 p-4"
           onClick={() => setStatement(false)}
         >
           <div
@@ -265,7 +265,7 @@ export function A11yToolbar() {
             <button
               type="button"
               onClick={() => setStatement(false)}
-              className="mt-5 rounded-full bg-cobalt px-5 py-2 text-sm font-bold text-paper"
+              className="mt-5 rounded-full bg-cobalt px-5 py-2 text-sm font-bold text-white"
             >
               Close
             </button>
@@ -295,7 +295,7 @@ function Toggle({
       className={`flex w-full items-center justify-between rounded-xl border px-3 py-2 text-sm transition ${
         active
           ? "border-cobalt/50 bg-cobalt/10 text-paper"
-          : "border-line text-paper hover:bg-white/5"
+          : "border-line text-paper hover:bg-black/[0.04]"
       }`}
     >
       <span className="flex items-center gap-2">

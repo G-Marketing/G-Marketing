@@ -31,7 +31,7 @@ export const PILLARS = [
       "Search, social, and video media planned against a number, not a channel habit.",
     image: "/images/service-advertising.jpg",
     imageAlt:
-      "Night city with precise beams of light on selected buildings, a metaphor for targeted advertising.",
+      "Sunlit city with precise blue light on selected buildings, a metaphor for targeted advertising.",
   },
   {
     slug: "marketing",
@@ -42,7 +42,7 @@ export const PILLARS = [
       "Positioning, SEO, content, and lifecycle so the brand is findable when the ads are off.",
     image: "/images/service-marketing.jpg",
     imageAlt:
-      "A night brand-workshop table with sketches, metal type, and a single desk lamp.",
+      "A sunlit brand-workshop table with sketches, metal type, and window light.",
   },
   {
     slug: "growth",
@@ -53,7 +53,7 @@ export const PILLARS = [
       "Tracking, experiments, and conversion design that raise the yield of every visit you already paid for.",
     image: "/images/service-growth.jpg",
     imageAlt:
-      "Abstract crystalline form growing from a grid of data points, a metaphor for compounding growth.",
+      "A pale crystalline form growing from a data grid in a bright studio, a metaphor for compounding growth.",
   },
 ] as const;
 
@@ -106,7 +106,7 @@ export const PROCESS = [
 export const MARKETS = [
   {
     title: "Local markets",
-    body: "Win the city, the language, and the map pack. Local work is not a smaller version of global — it is denser: reviews, local ads, culturally exact creative, and compliance that actually applies.",
+    body: "Win the city, the language, and the map pack. Local work is not a smaller version of global. It is denser: reviews, local ads, culturally exact creative, and compliance that actually applies.",
     points: [
       "Search + Maps + local service ads",
       "Language, dialect, and proof that feels native",
@@ -133,7 +133,7 @@ export const ADVERTISING = {
   offerings: [
     {
       title: "Search & shopping",
-      body: "Google and Microsoft: brand defense, non-brand capture, shopping feeds, and negatives as a discipline — not a cleanup day.",
+      body: "Google and Microsoft: brand defense, non-brand capture, shopping feeds, and negatives as a discipline, not a cleanup day.",
     },
     {
       title: "Paid social & video",
@@ -175,7 +175,7 @@ export const MARKETING = {
     },
     {
       title: "SEO & content",
-      body: "Technical health, information architecture, and pages built to rank for commercial intent — not blog volume.",
+      body: "Technical health, information architecture, and pages built to rank for commercial intent, not blog volume.",
     },
     {
       title: "Lifecycle & CRM",

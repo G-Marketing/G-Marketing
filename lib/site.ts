@@ -7,7 +7,7 @@ export const SITE = {
   tagline: "Advertising. Marketing. Growth.",
   description:
     "G-Marketing plans, buys, and proves advertising, marketing, and growth programs for companies that need to win locally and scale globally.",
-  themeColor: "#07090e",
+  themeColor: "#f4f6f8",
 } as const;
 
 export const NAV = [

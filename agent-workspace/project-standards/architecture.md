@@ -1,7 +1,7 @@
 # G-Marketing architecture
 
 Public marketing site for G-Marketing (`https://www.g-marketing.net`).
-English only. Local preview until an explicit deploy is approved.
+English only. Production is the Vercel Hobby project `g-marketing` on team `Mcontrol`.
 
 ## Stack
 
@@ -19,9 +19,9 @@ English only. Local preview until an explicit deploy is approved.
 - `components/` — layout chrome and page sections
 - `app/api/contact/route.ts` — lead intake only
 
-## Hosting (not in this ticket)
+## Hosting
 
-Production already points `www.g-marketing.net` at the Vercel Hobby project `g-marketing` under the `Mcontrol` team. This ticket does not deploy.
+Production points `www.g-marketing.net` at the Vercel Hobby project `g-marketing` under the `Mcontrol` team.
 
 Preferred public host is `www`. Apex redirects to `www`.
 

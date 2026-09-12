@@ -43,7 +43,7 @@ export default function ContactPage() {
             <div className="mt-10 overflow-hidden rounded-3xl border border-line">
               <Image
                 src="/images/contact-room.jpg"
-                alt="Quiet night meeting room with performance curves on the wall."
+                alt="Bright glass meeting room with performance curves on the wall."
                 width={1200}
                 height={900}
                 className="h-64 w-full object-cover"

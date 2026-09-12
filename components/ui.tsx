@@ -10,9 +10,15 @@ export function JsonLd({ data }: { data: unknown }) {
   );
 }
 
-export function Kicker({ children }: { children: ReactNode }) {
+export function Kicker({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
-    <p className="text-xs font-medium uppercase tracking-[0.22em] text-gold">
+    <p className={`text-xs font-medium uppercase tracking-[0.22em] text-gold ${className}`}>
       {children}
     </p>
   );
@@ -42,7 +48,7 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`py-20 sm:py-28 ${className}`}>
+    <section id={id} className={`py-8 sm:py-12 ${className}`}>
       <Container>{children}</Container>
     </section>
   );
@@ -59,7 +65,7 @@ export function Button({
 }) {
   const cls =
     variant === "primary"
-      ? "bg-cobalt text-paper hover:bg-[#5b90ff]"
+      ? "bg-cobalt text-white hover:bg-[#1d4ed8]"
       : "border border-line text-paper hover:border-paper/40";
 
   return (

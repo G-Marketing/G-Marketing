@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -12,6 +12,14 @@ html {
 
 body {
   @apply bg-ink font-sans font-normal text-paper antialiased;
+  background-image:
+    radial-gradient(circle at 100% -8%, rgba(37, 99, 235, 0.09), transparent 42%),
+    linear-gradient(rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+    url("/images/site-network.svg");
+  background-size: auto, 56px 56px, 56px 56px, 960px 640px;
+  background-position: 0 0, 0 0, 0 0, center 4%;
+  background-repeat: no-repeat, repeat, repeat, no-repeat;
 }
 
 h1,
@@ -22,12 +30,12 @@ h4 {
 }
 
 ::selection {
-  background: #3d7cff;
-  color: #f4f6fa;
+  background: #2563eb;
+  color: #ffffff;
 }
 
 .skip-link {
-  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-cobalt focus:px-4 focus:py-2;
+  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-cobalt focus:px-4 focus:py-2 focus:text-white;
 }
 
 a:focus-visible,
@@ -53,6 +61,7 @@ html.a11y-readable textarea {
 html.a11y-contrast,
 html.a11y-contrast body {
   background: #000 !important;
+  background-image: none !important;
   color: #fff !important;
 }
 
@@ -94,6 +103,37 @@ html.a11y-motion *::after {
   animation: none !important;
   transition: none !important;
   scroll-behavior: auto !important;
+}
+
+@keyframes hero-reel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reel-in {
+  animation: hero-reel-in 0.45s ease-out;
+}
+
+@keyframes hero-point-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-point-in {
+  opacity: 0;
+  animation: hero-point-in 0.5s ease-out forwards;
 }
 
 html.a11y-focus *:focus {

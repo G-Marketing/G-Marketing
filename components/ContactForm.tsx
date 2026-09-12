@@ -51,7 +51,7 @@ export function ContactForm() {
   }
 
   const field =
-    "w-full rounded-xl border border-line bg-ink px-4 py-3 text-sm text-paper outline-none ring-cobalt placeholder:text-mist/70 focus:ring-2";
+    "w-full rounded-xl border border-line bg-panel px-4 py-3 text-sm text-paper outline-none ring-cobalt placeholder:text-mist/70 focus:ring-2";
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4" noValidate>
@@ -115,7 +115,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="rounded-full bg-cobalt px-5 py-3 text-sm font-medium text-paper disabled:opacity-60"
+        className="rounded-full bg-cobalt px-5 py-3 text-sm font-medium text-white disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Request the diagnostic"}
       </button>

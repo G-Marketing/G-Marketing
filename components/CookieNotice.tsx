@@ -24,7 +24,7 @@ export function CookieNotice() {
         </p>
         <button
           type="button"
-          className="shrink-0 rounded-full bg-cobalt px-4 py-2 text-paper"
+          className="shrink-0 rounded-full bg-cobalt px-4 py-2 text-white"
           onClick={() => {
             localStorage.setItem("gm-cookie-ack", "1");
             setShow(false);

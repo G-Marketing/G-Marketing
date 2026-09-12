@@ -28,7 +28,7 @@ export default function ServicesPage() {
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-8 text-mist">
           Advertising buys demand. Marketing earns it. Growth keeps it. You can
-          hire one line or all three — the scoreboard stays the same.
+          hire one line or all three. The scoreboard stays the same.
         </p>
       </Section>
       <Section className="pt-0">

@@ -69,7 +69,7 @@ export function ServicePage({
         <h2 className="mt-3 font-bold text-3xl text-paper">How this line is judged</h2>
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {effectiveness.map((block) => (
-            <article key={block.label} className="rounded-2xl border border-line bg-ink p-6">
+            <article key={block.label} className="rounded-2xl border border-line bg-panel p-6">
               <h3 className="text-sm uppercase tracking-[0.16em] text-gold">{block.label}</h3>
               <ul className="mt-4 space-y-3 text-sm leading-6 text-mist">
                 {block.items.map((item) => (
