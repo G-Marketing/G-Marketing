@@ -35,7 +35,7 @@ export default function GrowthPage() {
       <ServicePage
         kicker="Growth"
         title={GROWTH.hero}
-        intro={GROWTH.intro}
+        points={GROWTH.points}
         image={pillar.image}
         imageAlt={pillar.imageAlt}
         offerings={GROWTH.offerings}

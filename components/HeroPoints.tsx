@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const POINTS = [
   "Produce quality leads & online sales flow",
   "Across B2B and B2C markets",
-  "Implement marketing AI",
+  "Marketing AI tools Implementation",
   "Convert it through CTA systems",
 ];
 
@@ -36,7 +36,7 @@ function Check() {
   );
 }
 
-export function HeroPoints() {
+export function HeroPoints({ points = POINTS }: { points?: readonly string[] }) {
   const [play, setPlay] = useState(false);
   const [instant, setInstant] = useState(false);
 
@@ -51,7 +51,7 @@ export function HeroPoints() {
 
   return (
     <ul className="flex flex-1 flex-col justify-evenly gap-4">
-      {POINTS.map((text, i) => (
+      {points.map((text, i) => (
         <li
           key={text}
           className={`flex items-start gap-3 text-lg leading-7 text-paper sm:text-xl sm:leading-8 ${

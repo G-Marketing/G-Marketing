@@ -12,7 +12,7 @@ English only. Production is the Vercel Hobby project `g-marketing` on team `Mcon
 
 ## Layers
 
-- `lib/site.ts` — canonical URL, nav, brand constants
+- `lib/site.ts` — canonical URL, primary nav, footer links, brand constants
 - `lib/seo.ts` — metadata helpers and JSON-LD builders
 - `data/copy.ts` — all marketing copy and service models
 - `app/` — routes, metadata, sitemap, robots

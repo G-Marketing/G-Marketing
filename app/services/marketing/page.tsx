@@ -35,7 +35,7 @@ export default function MarketingPage() {
       <ServicePage
         kicker="Marketing"
         title={MARKETING.hero}
-        intro={MARKETING.intro}
+        points={MARKETING.points}
         image={pillar.image}
         imageAlt={pillar.imageAlt}
         offerings={MARKETING.offerings}

@@ -31,7 +31,7 @@ export const PILLARS = [
       "Search, social, and video media planned against a number, not a channel habit.",
     image: "/images/service-advertising.jpg",
     imageAlt:
-      "Sunlit city with precise blue light on selected buildings, a metaphor for targeted advertising.",
+      "Sunlit city with precise blue light on selected towers and houses, a metaphor for targeted advertising.",
   },
   {
     slug: "marketing",
@@ -130,6 +130,12 @@ export const ADVERTISING = {
   hero: "Paid media that is accountable to revenue.",
   intro:
     "We buy attention only when the path from click to cash is instrumented. Channel mix follows that path, not the latest platform pitch.",
+  points: [
+    "Buy media against CRM-qualified outcomes, not platform estimates.",
+    "Give each channel a job: search for intent, social and video for demand.",
+    "Move budget to the queries and placements that produce pipeline.",
+    "Test creative, offer, and landing pages as one unit.",
+  ],
   offerings: [
     {
       title: "Search & shopping",
@@ -168,6 +174,12 @@ export const MARKETING = {
   hero: "A brand that is findable, clear, and repeatable.",
   intro:
     "Marketing here is the system that makes advertising cheaper: search demand you own, a story people remember, and a lifecycle that does not go silent after the first click.",
+  points: [
+    "Use one positioning line in ads, on the site, and in sales.",
+    "Build pages for commercial intent, not for content volume.",
+    "Stamp organic source into the CRM and judge SEO by pipeline.",
+    "Keep a lifecycle loop running after the first click.",
+  ],
   offerings: [
     {
       title: "Positioning & message",
@@ -206,6 +218,12 @@ export const GROWTH = {
   hero: "Raise the yield of demand you already have.",
   intro:
     "Growth is the operating system: analytics, experiments, and conversion design. It is how advertising and marketing compound instead of resetting every quarter.",
+  points: [
+    "Define lead, opportunity, and revenue once for every dashboard.",
+    "Instrument the path from first session to paid invoice.",
+    "Test offers and friction against a metric agreed before the test.",
+    "Run holdouts or geo splits when last-click is too expensive to trust.",
+  ],
   offerings: [
     {
       title: "Measurement spine",

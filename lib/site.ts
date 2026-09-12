@@ -11,16 +11,16 @@ export const SITE = {
 } as const;
 
 export const NAV = [
-  {
-    href: "/services",
-    label: "Services",
-    children: [
-      { href: "/services/advertising", label: "Advertising" },
-      { href: "/services/marketing", label: "Marketing" },
-      { href: "/services/growth", label: "Growth" },
-    ],
-  },
+  { href: "/services/advertising", label: "Advertising" },
+  { href: "/services/marketing", label: "Marketing" },
+  { href: "/services/growth", label: "Growth" },
+] as const;
+
+export const FOOTER = [
+  { href: "/services", label: "Services" },
   { href: "/markets", label: "Markets" },
   { href: "/approach", label: "Approach" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms of Use" },
 ] as const;

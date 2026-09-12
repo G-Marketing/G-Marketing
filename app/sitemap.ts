@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/approach",
     "/contact",
     "/privacy",
+    "/terms",
   ];
 
   return paths.map((path) => ({

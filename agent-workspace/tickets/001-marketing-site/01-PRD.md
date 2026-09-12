@@ -32,6 +32,7 @@ Secondary: mailto `hello@g-marketing.net`, in-page CTAs.
 | `/contact` | Lead form |
 | `/thank-you` | Post-submit, `noindex` |
 | `/privacy` | Privacy / cookies (required before pixels) |
+| `/terms` | Website Terms of Use |
 
 ## Non-goals
 - Hebrew version

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Kicker, Section } from "@/components/ui";
 import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -14,7 +15,14 @@ export default function PrivacyPage() {
       <Kicker>Legal</Kicker>
       <h1 className="mt-4 font-bold text-4xl sm:text-5xl">Privacy</h1>
       <div className="mt-10 max-w-3xl space-y-8 text-sm leading-7 text-mist">
-        <p>Last updated 11 September 2026. Controller: {SITE.name}. Contact: {SITE.email}.</p>
+        <p>
+          Last updated 11 September 2026. Controller: {SITE.name}. Contact: {SITE.email}.
+          Site use is also governed by our{" "}
+          <Link href="/terms" className="text-paper underline-offset-4 hover:underline">
+            Terms of Use
+          </Link>
+          .
+        </p>
         <section>
           <h2 className="text-lg text-paper">What we collect</h2>
           <p className="mt-2">

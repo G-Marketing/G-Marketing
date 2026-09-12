@@ -10,3 +10,4 @@
 - Production verify: `node agent-workspace/tickets/001-marketing-site/verify-production.mjs`
 - Accessibility toolbar (ticket 002): English port of bina-6. Storage key `gm-a11y`. Footer event `gm-a11y-statement`.
 - Ticket 003 production: light canvas, globe lockup, homepage reel. Dark images in `backups/pre-light.20260912-0034/`. Pre-deploy snapshot in `backups/pre-deploy.light.*`. Rollback git SHA before this ship: `48bd3fe`.
+- Nav/terms/service-hero ship: primary nav is Advertising, Marketing, Growth. Footer holds Services, Markets, Approach, Contact, Privacy, Terms of Use. Pre-deploy snapshot in `backups/pre-deploy.nav-terms.*`. Rollback git SHA before this ship: `28d2305`.

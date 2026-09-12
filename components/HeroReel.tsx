@@ -19,7 +19,7 @@ const SLIDES: Slide[] = [
     kind: "end",
     brand: "G-Marketing",
     line: "Multi-Market Expertise",
-    promise: "Progress. Success. Growth.",
+    promise: "Advertising. Marketing. Growth.",
     accent: "#2563eb",
   },
 ];
@@ -255,7 +255,7 @@ export function HeroReel() {
       <p className="sr-only">
         Short loop of G-Marketing channels: Google Ads, Meta, LinkedIn, YouTube,
         SEO, local density, and global market cells. Ends on G-Marketing,
-        Multi-Market Expertise, Progress. Success. Growth.
+        Multi-Market Expertise, Advertising. Marketing. Growth.
       </p>
     </div>
   );

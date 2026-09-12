@@ -5,15 +5,16 @@
 const BASE = process.argv[2] || "https://www.g-marketing.net";
 
 const routes = [
-  { path: "/", expect: 200, contains: ["G-Marketing", "Book a growth diagnostic", "Advertising. Marketing. Growth.", "Open accessibility menu", "Produce quality leads", "Progress. Success. Growth."] },
+  { path: "/", expect: 200, contains: ["G-Marketing", "Book a growth diagnostic", "Advertising. Marketing. Growth.", "Open accessibility menu", "Produce quality leads", "Terms of Use"] },
   { path: "/services", expect: 200, contains: ["Three lines"] },
-  { path: "/services/advertising", expect: 200, contains: ["Paid media"] },
-  { path: "/services/marketing", expect: 200, contains: ["findable"] },
-  { path: "/services/growth", expect: 200, contains: ["yield"] },
+  { path: "/services/advertising", expect: 200, contains: ["Paid media", "Buy media against CRM-qualified"] },
+  { path: "/services/marketing", expect: 200, contains: ["findable", "commercial intent"] },
+  { path: "/services/growth", expect: 200, contains: ["yield", "holdouts or geo splits"] },
   { path: "/markets", expect: 200, contains: ["A local win"] },
   { path: "/approach", expect: 200, contains: ["Diagnostic"] },
   { path: "/contact", expect: 200, contains: ["Book the diagnostic"] },
   { path: "/privacy", expect: 200, contains: ["Privacy"] },
+  { path: "/terms", expect: 200, contains: ["Terms of Use"] },
   { path: "/thank-you", expect: 200, contains: ["Received"] },
   { path: "/sitemap.xml", expect: 200, contains: ["https://www.g-marketing.net"] },
   { path: "/robots.txt", expect: 200, contains: ["Sitemap:"] },

@@ -2,15 +2,7 @@
 
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { SITE } from "@/lib/site";
-
-const FOOT = [
-  { href: "/services", label: "Services" },
-  { href: "/markets", label: "Markets" },
-  { href: "/approach", label: "Approach" },
-  { href: "/contact", label: "Contact" },
-  { href: "/privacy", label: "Privacy" },
-];
+import { FOOTER, SITE } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -31,7 +23,7 @@ export function Footer() {
         </div>
         <nav aria-label="Footer">
           <ul className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
-            {FOOT.map((item) => (
+            {FOOTER.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="text-mist hover:text-paper">
                   {item.label}
