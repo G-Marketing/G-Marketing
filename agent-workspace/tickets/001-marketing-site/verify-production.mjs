@@ -60,17 +60,21 @@ async function checkSeoHome() {
   const canonical = (text.match(/rel="canonical" href="([^"]+)"/) || [])[1];
   const jsonld = text.includes("application/ld+json");
   const og = (text.match(/property="og:image" content="([^"]+)"/) || [])[1];
+  const ogTitle = (text.match(/property="og:title" content="([^"]+)"/) || [])[1];
   const hebrewPlaceholder = text.includes("האתר בהקמה");
+  const ogOk = Boolean(og) && og.includes("og-preview.jpg");
+  const titleOk = (ogTitle || "").includes("Advertising. Marketing. Growth.") && !(ogTitle || "").includes("and growth");
   const ok =
     res.status === 200 &&
     (canonical === "https://www.g-marketing.net/" ||
       canonical === "https://www.g-marketing.net") &&
     jsonld &&
-    Boolean(og) &&
+    ogOk &&
+    titleOk &&
     !hebrewPlaceholder;
   if (!ok) failed += 1;
   console.log(
-    `${ok ? "PASS" : "FAIL"} home SEO canonical=${canonical} jsonld=${jsonld} og=${og} placeholder=${hebrewPlaceholder}`,
+    `${ok ? "PASS" : "FAIL"} home SEO canonical=${canonical} jsonld=${jsonld} og=${og} ogTitle=${ogTitle} placeholder=${hebrewPlaceholder}`,
   );
 }
 
@@ -102,12 +106,21 @@ async function checkLeadApi() {
   console.log(`${ok ? "PASS" : "FAIL"} POST /api/contact ${res.status} ${body.slice(0, 80)}`);
 }
 
+async function checkFavicon() {
+  const { res, text } = await get(BASE.replace(/\/$/, "") + "/icon.svg");
+  const opaque = text.includes("#f4f6f8") || text.includes('fill="#f4f6f8"');
+  const ok = res.status === 200 && text.includes("<svg") && !opaque;
+  if (!ok) failed += 1;
+  console.log(`${ok ? "PASS" : "FAIL"} /icon.svg opaqueFill=${opaque}`);
+}
+
 const results = [];
 for (const route of routes) {
   await checkRoute(route);
 }
 await checkApex();
 await checkSeoHome();
+await checkFavicon();
 await checkLeadApi();
 await checkGuards();
 

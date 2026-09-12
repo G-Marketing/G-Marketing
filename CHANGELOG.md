@@ -4,6 +4,7 @@
 
 - Ticket 003: shipped the light canvas, cobalt brand lockup (G-Marketing / Global Marketing), homepage reel, and the rest of the local visual pass to production.
 - Shipped primary nav as Advertising, Marketing, Growth; Services, Markets, Approach, and Contact stay as pages in the footer. Added `/terms`. Service heroes match the home layout with line-specific proof points. Rollback SHA: `28d2305`.
+- Share card uses the brand lockup (`og-preview.jpg`, 1200×630) and the title `Advertising. Marketing. Growth.` Favicon is the globe on a transparent background. Rollback SHA: `c971b81`.
 
 ## 2026-09-11
 

@@ -19,7 +19,7 @@ export function pageMetadata({
   description,
   path,
   index = true,
-  ogImage = "/images/og-share.jpg",
+  ogImage = "/images/og-preview.jpg",
 }: SeoInput): Metadata {
   const url = absoluteUrl(path);
   const branded = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
@@ -38,7 +38,7 @@ export function pageMetadata({
       title: branded,
       description,
       locale: SITE.locale,
-      images: [{ url: absoluteUrl(ogImage), width: 1376, height: 768, alt: SITE.name }],
+      images: [{ url: absoluteUrl(ogImage), width: 1200, height: 630, alt: `${SITE.name} | ${SITE.tagline}` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -69,7 +69,7 @@ export function organizationJsonLd() {
     name: SITE.name,
     url: SITE.url,
     email: SITE.email,
-    image: absoluteUrl("/images/og-share.jpg"),
+    image: absoluteUrl("/images/og-preview.jpg"),
     logo: absoluteUrl("/images/brand-mark.png"),
     description: SITE.description,
     areaServed: ["Local markets", "International markets"],

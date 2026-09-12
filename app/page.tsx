@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: `${SITE.name} | Advertising, marketing, and growth`,
+  title: `${SITE.name} | ${SITE.tagline}`,
   description: SITE.description,
   path: "/",
 });
