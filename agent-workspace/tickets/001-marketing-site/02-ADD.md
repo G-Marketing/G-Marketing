@@ -19,7 +19,7 @@ File-based under `app/`. Canonical host `https://www.g-marketing.net`.
 
 ## SEO
 - `metadataBase`, unique title/description per route, canonical
-- Open Graph + Twitter using `public/images/og-card.jpg` (1200×630)
+- Open Graph + Twitter using `public/images/og-lockup.jpg` (1200×630)
 - `sitemap.ts`, `robots.ts`
 - JSON-LD: Organization, ProfessionalService, WebSite, BreadcrumbList, FAQPage, Service
 - Semantic headings, alt text, skip-link, focus styles

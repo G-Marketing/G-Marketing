@@ -62,7 +62,7 @@ async function checkSeoHome() {
   const og = (text.match(/property="og:image" content="([^"]+)"/) || [])[1];
   const ogTitle = (text.match(/property="og:title" content="([^"]+)"/) || [])[1];
   const hebrewPlaceholder = text.includes("האתר בהקמה");
-  const ogOk = Boolean(og) && og.includes("og-card.jpg");
+  const ogOk = Boolean(og) && og.includes("og-lockup.jpg");
   const titleOk = (ogTitle || "").includes("Advertising. Marketing. Growth.") && !(ogTitle || "").includes("and growth");
   const ok =
     res.status === 200 &&

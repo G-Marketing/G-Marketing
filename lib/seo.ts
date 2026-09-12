@@ -19,7 +19,7 @@ export function pageMetadata({
   description,
   path,
   index = true,
-  ogImage = "/images/og-card.jpg",
+  ogImage = "/images/og-lockup.jpg",
 }: SeoInput): Metadata {
   const url = absoluteUrl(path);
   const branded = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
@@ -69,7 +69,7 @@ export function organizationJsonLd() {
     name: SITE.name,
     url: SITE.url,
     email: SITE.email,
-    image: absoluteUrl("/images/og-card.jpg"),
+    image: absoluteUrl("/images/og-lockup.jpg"),
     logo: absoluteUrl("/images/brand-mark.png"),
     description: SITE.description,
     areaServed: ["Local markets", "International markets"],

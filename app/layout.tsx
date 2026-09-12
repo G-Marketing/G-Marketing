@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     url: SITE.url,
     title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
-    images: [{ url: "/images/og-card.jpg", width: 1200, height: 630, alt: `${SITE.name} | ${SITE.tagline}` }],
+    images: [{ url: "/images/og-lockup.jpg", width: 1200, height: 630, alt: `${SITE.name} | ${SITE.tagline}` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
-    images: ["/images/og-card.jpg"],
+    images: ["/images/og-lockup.jpg"],
   },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
